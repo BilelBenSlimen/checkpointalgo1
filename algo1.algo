@@ -1,0 +1,32 @@
+ALGORITHM Algorithme_checkpoint_1
+VAR
+    sentence:STRING;
+    sum_of_ch:INTEGER;
+    sum_of_words:INTEGER:=0;
+    i;INTEGER
+
+BEGIN
+    REPEAT
+    Read(sentence)
+
+    UNTIL (sentence[length(sentence)-1]='.')
+    sum_of_ch:=length(sentence)
+    FOR i FROM 0 TO length(sentence)-1 STEP 1  DO
+    IF (sentence[i]='') THEN
+        sum_of_words:=sum_of_words+1
+    END_IF
+        
+    END_FOR
+END
+ALGORITHM voyels_num
+VAR
+        sum_of_voyels:INTEGER:=0;
+        i:INTEGER
+BEGIN
+FOR i FROM 0 TO length(sentence)-1 STEP 1 DO
+IF (sentence[i]='a') or(sentence[i]='i') or (sentence[i]='e') or (sentence[i]='u') or (sentence[i]='y')or (sentence[i]='o')THEN
+    sum_of_voyels:=sum_of_voyels+1
+END_IF
+END_FOR
+   
+END
